@@ -1,0 +1,46 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>Wanna hire!!</h2>
+        <p># filler</p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+       <div class="card card-body" >
+         <h1>people</h1>
+       </div>
+      <div class="card card-body">
+        <table class="table">
+          <tr>
+            <th>name</th>
+            <th>email</th>
+            <th>area of expertees</th>
+            <th>about</th>
+            <th>date</th>
+          </tr>
+          {% for mainman in objs %}
+            <tr>
+              <td>{{mainman.name}}</td>
+              <td>{{mainman.email}}</td>
+              <td>{{mainman.area_of_expertees}}</td>
+              <td>{{mainman.tell_us_about_yourself}}</td>
+              <td>{{mainman.date}}</td>
+           </tr>
+          {% endfor %}
+        </table>
+      </div>
+
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

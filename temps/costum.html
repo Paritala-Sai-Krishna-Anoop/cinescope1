@@ -1,0 +1,29 @@
+
+{% extends 'home.html' %}
+
+{% block content %}
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>Get Hired!!</h2>
+        <p># filler</p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <form method="post">
+          {% csrf_token %}
+          <table>
+          {{form.as_table}}
+          </table>
+          <button type="submit" class="get-started-btn">Submit</button>
+        </form>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

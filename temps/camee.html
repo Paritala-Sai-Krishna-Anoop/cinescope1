@@ -1,0 +1,30 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>CAMERAS</h2>
+        <p># filler</p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+       <div class="card card-body" >
+         <h1>7 Best Video Cameras for Filmmakers: Digital Camera Buying Guide 2020</h1>
+       </div>
+      <div class="card card-body">
+        {% for camera in obj %}
+          <h3>Name : {{camera.name}}</h3>
+          <h6>price : ${{camera.price}}</h6>
+          <p>Info : {{camera.subject}}</p>
+        {% endfor %}
+      </div>
+
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+{% endblock %}

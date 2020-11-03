@@ -1,0 +1,39 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>Audio equipment for film making.</h2>
+        <p># filler</p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+       <div class="card card-body" >
+         <h1>Audio equipment</h1>
+       </div>
+      <div class="card card-body">
+        <table class="table">
+          <tr>
+            <th>Software name</th>
+            <th>Price</th>
+          </tr>
+          {% for audioe in obj %}
+            <tr>
+              <td>{{audioe.softwarename}}</td>
+              <td>{{audioe.price}}</td>
+           </tr>
+          {% endfor %}
+        </table>
+      </div>
+
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+{% endblock %}

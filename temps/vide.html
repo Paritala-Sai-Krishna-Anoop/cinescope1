@@ -1,0 +1,43 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>video editing softwares.</h2>
+        <p># filler</p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+       <div class="card card-body" >
+         <h1>video editing and film making softwares.</h1>
+       </div>
+      <div class="card card-body">
+          <form method="get">
+            {{myveFilter.form}}
+
+            <button class="get-started-btn" type="submit">
+              search</button>
+          </form>
+        <table class="table">
+          <tr>
+            <th>software name</th>
+              <th>Software type</th>
+              <th>price</th>
+          </tr>
+          {% for videoe in obj %}
+            <tr>
+              <td>{{videoe.softwarename}}</td>
+              <td>{{videoe.softwaretype}}</td>
+              <td>{{videoe.price}}</td>
+           </tr>
+          {% endfor %}
+        </table>
+      </div>
+
+    </section><!-- End Contact Section -->
+
+{% endblock %}

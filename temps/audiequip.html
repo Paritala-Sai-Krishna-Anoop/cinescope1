@@ -1,0 +1,48 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+
+
+    <main id="main">
+
+      <!-- ======= Breadcrumbs ======= -->
+      <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container">
+          <h2>Audio equipment for film making.</h2>
+          <p># filler</p>
+        </div>
+      </div><!-- End Breadcrumbs -->
+
+      <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact">
+         <div class="card card-body" >
+           <h1>Audio equipment</h1>
+         </div>
+        <div class="card card-body">
+          <form method="get">
+            {{myFilter.form}}
+
+            <button class="get-started-btn" type="submit">
+              search</button>
+          </form>
+          <table class="table">
+            <tr>
+              <th>name</th>
+              <th>price</th>
+              <th>type</th>
+            </tr>
+            {% for audio in obj %}
+              <tr>
+                <td>{{audio.name}}</td>
+                <td>{{audio.price}}</td>
+                <td>{{audio.type}}</td>
+             </tr>
+            {% endfor %}
+          </table>
+        </div>
+
+      </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+{% endblock %}

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from.forms import hiringform
 from .models import mainman , camera , audio , audioe , videoe
-from .filters import audiofilter, videoefilter
+from .filters import audiofilter, videoefilter , jobfilter
 def homeview(request):
     return render(request, "index.html")
 def courses(request):
@@ -37,8 +37,13 @@ def costum(request):
 def hired(request):
     form = hiringform()
     objs= mainman.objects.all()
-    context = {'form': form,'objs':objs}
+    jobffilter = jobfilter(request.GET, queryset=objs)
+    objs = jobffilter.qs
+
+    context = {'form': form,'objs':objs ,'jobffilter':jobffilter}
     return render(request, "want.html",context)
+
+
 def camee(request):
     obj=camera.objects.all()
     context={'obj':obj}

@@ -85,7 +85,7 @@
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
       <h1>cinescope<br>IS THE BEST</h1>
       <h2> work in progress!!!</h2>
-      <a href="/" class="btn-get-started">Get Started</a>
+      <a href="/costum/" class="btn-get-started">Get Started</a>
     </div>
   </section><!-- End Hero -->
 
@@ -459,9 +459,10 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
-            <p>join us to build a bright career in film making.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="join">
+            <p>join us to build a bright career in film making by just submitting your mail.</p>
+            <form method="post">
+              {% csrf_token %}
+              <input type="email">{{form.as_ps}}<input type="submit" value="join">
             </form>
           </div>
 

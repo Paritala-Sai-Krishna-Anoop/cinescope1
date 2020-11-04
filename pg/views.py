@@ -1,9 +1,17 @@
 from django.shortcuts import render
-from.forms import hiringform
+from.forms import hiringform,joiningform
 from .models import mainman , camera , audio , audioe , videoe
 from .filters import audiofilter, videoefilter , jobfilter
 def homeview(request):
-    return render(request, "index.html")
+    form = joiningform()
+
+    if request.method == 'POST':
+        form = joiningform(request.POST)
+        if form.is_valid():
+            form.save()
+    context = {'form': form}
+    return render(request, "index.html", context)
+
 def courses(request):
     return render(request, "courses.html")
 def contact(request):
@@ -21,7 +29,14 @@ def about(request):
 def direct(request):
     return render(request, "direction.html")
 def home(request):
-    return render(request, "home.html")
+    form = joiningform()
+
+    if request.method == 'POST':
+        form =joiningform(request.POST)
+        if form.is_valid():
+            form.save()
+    context = {'form': form}
+    return render(request, "home.html",context)
 
 def moviee(request):
     return render(request, "movieinfo.html")

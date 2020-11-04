@@ -70,3 +70,9 @@ class videoe(models.Model):
 
     def __str__(self):
         return self.softwarename
+
+class join(models.Model):
+    email = models.EmailField(blank=True, default='')
+
+    def __str__(self):
+        return self.email

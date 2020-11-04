@@ -1,5 +1,5 @@
 from django import forms
-from .models import mainman
+from .models import mainman , join
 
 
 class hiringform(forms.ModelForm):
@@ -15,3 +15,8 @@ class hiringform(forms.ModelForm):
 
 
         }
+class joiningform(forms.ModelForm):
+
+    class Meta:
+        model=join
+        fields='__all__'

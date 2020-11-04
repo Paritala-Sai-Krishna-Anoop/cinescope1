@@ -126,8 +126,9 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
             <p>join us to build a bright career in film making.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="join">
+            <form method="post">
+              {% csrf_token %}
+              <input type="email">{{form.as_ps}}<input type="submit" value="join">
             </form>
           </div>
 

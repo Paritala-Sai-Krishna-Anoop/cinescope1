@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from.forms import hiringform,joiningform
-from .models import mainman , camera , audio , audioe , videoe
+from .models import mainman , camera , audio , audioe , videoe , sw
 from .filters import audiofilter, videoefilter , jobfilter
 def homeview(request):
     form = joiningform()
@@ -64,6 +64,12 @@ def camee(request):
     context={'obj':obj}
 
     return render(request, "camee.html",context)
+
+def sws(request):
+    obj=sw.objects.all()
+    context={'obj':obj}
+
+    return render(request, "sw.html",context)
 
 def audi(request):
     obj = audio.objects.all()

@@ -7,4 +7,5 @@ admin.site.register(audio)
 admin.site.register(audioe)
 admin.site.register(videoe)
 admin.site.register(join)
+admin.site.register(sw)
 # Register your models here.

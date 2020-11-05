@@ -19,4 +19,5 @@ urlpatterns = [
     path('audioequipment/', views.audi, name="audio equipment"),
     path('hired/', views.hired, name="hired"),
     path('movieinfo/', views.moviee, name="movieinfo"),
+    path('screenw/', views.sws, name="screenw"),
 ]

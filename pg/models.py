@@ -76,3 +76,10 @@ class join(models.Model):
 
     def __str__(self):
         return self.email
+
+class sw(models.Model):
+    softwarename = models.CharField(max_length=100)
+    price = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.softwarename

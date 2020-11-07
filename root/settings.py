@@ -1,4 +1,5 @@
 import os
+import django_heroku
 
 from pathlib import Path
 
@@ -15,7 +16,7 @@ SECRET_KEY = '7#i!+yuh@-2yegr*5nkellyyoupussyyoupussyx8ec$b!&2-#%ko4*ey)*52m54@f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 INSTALLED_APPS = [
@@ -117,7 +118,7 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'root')
 
 
-
+django_heroku.settings(locals())
 
 
 

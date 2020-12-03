@@ -2,8 +2,30 @@
 {% extends 'home.html' %}
 
 {% block content %}
+<style>
+body{
+  back-ground-color: #f8f8f8;
+}
+.dz{
+  border:dashed !important;
+  border-color: #ccc !important;
+  border-radius: 10px !important;
+}
+.dz:hover{
+  background-color: aliceblue !important;
+}
+</style>
 
+<script>
+Dropzone.autoDiscover= false;
 
+const myDropzone= new Dropzone("#my-dropzone",{
+ url:"costum/upload/",
+ maxFiles:1,
+ acceptedFiles:'.pdf'
+ })
+
+</script>
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
@@ -21,9 +43,16 @@
           <table>
           {{form.as_table}}
           </table>
-          <button type="submit" class="get-started-btn">Submit</button>
+                          <button type="submit" class="get-started-btn">Submit</button>
+
+        </form>
+
+        <form action="upload/" method="POST" class="dropzone dz" id="my-dropzone">
+             {% csrf_token %}
+              <div class="fallback">
+                <input name="file" type="file"  accept=".pdf,.doc"/>
+              </div>
         </form>
     </section><!-- End Contact Section -->
-
   </main><!-- End #main -->
 {% endblock %}

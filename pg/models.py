@@ -83,3 +83,7 @@ class sw(models.Model):
 
     def __str__(self):
         return self.softwarename
+
+class UploadFile(models.Model):
+    file=models.FileField(upload_to="resumes")
+

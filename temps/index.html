@@ -6,7 +6,12 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+<style>
+  .hello-msg{
+      font-size: 15px;
+      colour: black;
+      margin-right: 20px;
+</style>
   <title>cinescope-home</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
@@ -38,15 +43,13 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
+      <a href="/" class="logo mr-auto"><img src="{%static 'img/logo.png' %}" alt="" class="img-fluid"></a>
 
       <h1 class="logo mr-auto"><a href="/">cinescope</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="/" class="logo mr-auto"><img src="{%static 'img/logo.png' %}" alt="" class="img-fluid"></a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="/">Home</a></li>
-          <li><a href="/about/">About</a></li>
           <li class="drop-down"><a href="/">Film careers</a>
             <ul>
               <li><a href="/hired/">wanna hire!!</a></li>
@@ -70,22 +73,23 @@
               </li>
             </ul>
           </li>
-          <li><a href="/contact/">Contact</a></li>
-
+          <li><a href="/login/">Contact</a></li>
+          <li class="hello-msg">Hello,{{request.user}} </li>
+          <li><a href="/logout/">Logout</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="/costum/" class="get-started-btn">Get Started</a>
-
+      <a href="/signup/" class="get-started-btn">Get Started</a>
     </div>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
-      <h1>cinescope<br>IS THE BEST</h1>
-      <h2> work in progress!!!</h2>
-      <a href="/costum/" class="btn-get-started">Get Started</a>
+      <h1>CINESCOPE<br>collaborate and create your space</h1>
+      <h2> LEARN FILMMAKING.
+                       MEET FILMAKERS</h2>
+      <a href="/login/" class="btn-get-started">Get Started</a>
     </div>
   </section><!-- End Hero -->
 
@@ -105,18 +109,17 @@
             <img src="{% static 'img/about.jpg' %}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>some discription
-              about our project.</h3>
+            <h3>We believe SELF-EDUCATION is the only kind of education there is.</h3>
             <p class="font-italic">
-              main points and stuff(intro).
+              This a small attempt by us to the independent filmmaking community.
             </p>
             <ul>
-              <li><i class="icofont-check-circled"></i> point 1.</li>
-              <li><i class="icofont-check-circled"></i> point 2.</li>
-              <li><i class="icofont-check-circled"></i> point3.</li>
+              <li><i class="icofont-check-circled"></i>Connecting independent filmakers.</li>
+              <li><i class="icofont-check-circled"></i> Providing them with information about resources.</li>
+              <li><i class="icofont-check-circled"></i> Trying to help grow the independent filmaking community.</li>
             </ul>
             <p>
-              outro.
+              For the love of cinema.
             </p>
             <a href="about.html" class="learn-more-btn">Learn More</a>
           </div>
@@ -165,7 +168,7 @@
             <div class="content">
               <h3>Why Choose Cinescope?</h3>
               <p>
-                something more about our project.
+                It is a one stop destination for anyone know about resources or find someone to collaborate with.
               </p>
               <div class="text-center">
                 <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
@@ -179,21 +182,22 @@
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-receipt"></i>
                     <h4>Script writing.</h4>
-                    <p># about script writing stuff</p>
+                    <p>there is nothing without a story in the best way to put a story on the screen is to write a script.</p>
+                    <h5>Good script- Good cinema</h5>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-cube-alt"></i>
                     <h4>Team managment.</h4>
-                    <p>#about team managment stuff</p>
+                    <p>Cinema is a collaborative effort the greater a  team performance  the better the cinema.</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-images"></i>
                     <h4>Film making</h4>
-                    <p>#about film making and stuff</p>
+                    <p>The art of  film making comes out when you discover a story teller in you. </p>
                   </div>
                 </div>
               </div>

@@ -146,3 +146,11 @@
   });
 
 })(jQuery);
+
+Dropzone.autoDiscover= false;
+
+const myDropzone= new Dropzone("#my-dropzone",{
+     url:"costum/upload/",
+     maxFiles:1,
+     acceptedFiles:'.pdf',
+ })

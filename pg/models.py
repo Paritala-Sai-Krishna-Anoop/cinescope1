@@ -86,4 +86,3 @@ class sw(models.Model):
 
 class UploadFile(models.Model):
     file=models.FileField(upload_to="resumes")
-

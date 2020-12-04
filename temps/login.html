@@ -227,7 +227,7 @@ body {
                                 <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
                                 <script type='text/javascript'></script>
                             </head>
-                            <body oncontextmenu='return true' class='snippet-body'>
+                            <body oncontextmenu='return false' class='snippet-body'>
 
                              <div class="row">
     <div class="col-md-6 mx-auto p-0">
@@ -241,13 +241,14 @@ body {
                                         {% csrf_token %}
                                         <div class="group"> <label  class="label">Username </label> <input type="text" name="username" class="input" placeholder="Enter your username" > </div>
                                         <div class="group"> <label  class="label">Password</label> <input  type="password" name="password" class="input" data-type="password" placeholder="Enter your password"> </div>
-                                            <div class="group"> <input type="submit" class="button" value="Sign In"> </div>
+                                                                            <div class="hr"></div>
+
+                                        <div class="group"> <input type="submit" class="button" value="Sign In"> </div>
                                     </form>
                                     {% for message in messages %}
                                         <p id="messages">{{message}}</p>
                                     {% endfor %}
                                     <a href="/signup/">Sign up</a>
-                                    <div class="hr"></div>
                             </div>
 
                         </div>

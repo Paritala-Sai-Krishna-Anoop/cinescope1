@@ -4,6 +4,14 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+Dropzone.autoDiscover= false;
+
+const myDropzone= new Dropzone("#my-dropzone",{
+     url:"upload/",
+     maxFiles:1,
+     acceptedFiles:'.pdf',
+ })(jQuery);
+
 !(function($) {
   "use strict";
 
@@ -147,10 +155,3 @@
 
 })(jQuery);
 
-Dropzone.autoDiscover= false;
-
-const myDropzone= new Dropzone("#my-dropzone",{
-     url:"costum/upload/",
-     maxFiles:1,
-     acceptedFiles:'.pdf',
- })

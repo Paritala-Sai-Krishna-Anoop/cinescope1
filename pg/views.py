@@ -158,5 +158,3 @@ def  resumeupload(request):
 
             data = {'form': form}
     return render(request,'costum.html', data)
-
-

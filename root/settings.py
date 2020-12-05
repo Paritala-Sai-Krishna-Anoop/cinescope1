@@ -48,7 +48,7 @@ ROOT_URLCONF = 'root.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/Users/anoop/PycharmProjects/djangoweb2/root/temps/'],
+        'DIRS': ['/djangoweb2/root/temps/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

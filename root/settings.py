@@ -14,9 +14,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '7#i!+yuh@-2yegr*5nkellyyoupussyyoupussyx8ec$b!&2-#%ko4*ey)*52m54@f*rx3$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','829c27ce89e5.ngrok.io']
+ALLOWED_HOSTS = ['localhost','cinescope.herokuapp.com']
 
 
 INSTALLED_APPS = [
@@ -72,6 +72,8 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
 
 
 

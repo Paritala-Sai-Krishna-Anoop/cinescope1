@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '7#i!+yuh@-2yegr*5nkellyyoupussyyoupussyx8ec$b!&2-#%ko4*ey)*52m54@f*rx3$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost','cinescope.herokuapp.com']
 
@@ -34,6 +34,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -117,7 +118,7 @@ STATICFILES_DIRS = [
                     os.path.join(BASE_DIR, 'static'),
 
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'root')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 django_heroku.settings(locals())
